@@ -1,0 +1,37 @@
+ConvertStructure est un programme permettant de récupérer et sérialiser une zone définie d'un monde Minecraft dans le but de l'intégrer en tant que structure ou pattern au cours d'une génération de carte personnalisée.
+
+Ce dossier est composé de:
+
+-un fichier ConvertStructure.jar
+-un éxécutable lance.bat pour lancer le programme (optionnel)
+-un dossier "source" contenant le fichier source de la classe Structure (voir plus loin)
+
+
+*** Procédure ***
+
+
+-Créer, dans le jeu Minecraft, un nouveau monde de préférence plat et en mode création pour y construire la structure souhaitée (ou bien ouvrir un monde déjà créé).
+
+-Presser la touche F3 pour afficher la position du personnage et se placer successivement sur deux points extrémaux de la structure pour en noter les coordonnées.
+
+-Quitter le monde, démarrer le programme ConvertStructure par le fichier lance.bat (ou d'une autre manière) puis suivre les indications sur la console.
+
+-Saisir le nom du monde dans lequel se trouve la structure à récupérer (celui que vous venez de créer). Le simple nom suffit pour trouver le dossier si Minecraft a été installé dans les répertoires par défaut, sinon saisir le chemin complet du dossier. Le dossier du monde est normalement situé dans le répertoire "saves" du dossier d'installation Minecraft et doit contenir les sous-répertoires "data" et "region".
+
+-Entrer successivement les coordonées des deux points extrémaux (précédemment notés) sous la forme "x y z". L'ordre de saisie des deux points n'a pas d'importance.
+
+-Le programme crée un fichier output.struct contenant la structure extraite du monde.
+
+-Créer, dans un programme en java, un objet de la classe Structure prenant en paramètre du constructeur le chemin du fichier .struct venant d'être généré.
+
+-La structure est alors contenue dans un attribut de type short[][][] dont les informations sont accessibles par les accesseurs getBlock() et getTaille(). Une méthode place() permet de placer automatiquement la structure dans une Map passée en paramètre et retourne un booléen indiquant la réussite ou l'échec de la méthode.
+
+
+Remarque:
+
+Il est préférable de créer une sous-classe héritant de Structure et redéfinissant le constructeur ainsi que la méthode place().
+
+
+
+
+Le 21/02/2013 par Jerry O. FRANCHET
