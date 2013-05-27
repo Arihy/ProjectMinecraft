@@ -8,10 +8,10 @@ Les outils Map, MapUI et ModMinecraft contenus dans le dossier utils sont néces
 Mode d'emploi
 -------------
 
-Pré-requis:
+### Pré-requis:
   * Savoir comment fonctionne craftbukkit, c'est à dire comment le lancer et le configurer.
 
-Coté serveur:
+### Coté serveur:
 
   1. Copier le plugin Mapminecraft.jar dans le dossier plugin du serveur,
   2. Editer le fichier bukkit.yml pour qu'il prenne en compte le plugin, ajouter ces lignes a la fin du fichier
@@ -22,7 +22,7 @@ Coté serveur:
 
   3. Editer le fichier server.properties pour changer la ligne level-name en level-name:TESTMAP
 
-Coté générateur:
+### Coté générateur:
 
   1. Lancer la compilation de la classe Luncher qui se trouve dans generator,
 
